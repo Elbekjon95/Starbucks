@@ -13,10 +13,27 @@
     <header class="header">
         <div class="container">
             <div class="logo">StarBucks</div>
-            <nav class="nav">
-                <a href="#home" class="active">Home</a>
-                <a href="#select">Select</a>
-                <a href="#shop">Shop</a>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav" id="mobileNav">
+                <a href="#home" class="active" data-key="nav-home">Home</a>
+                <a href="#select" data-key="nav-select">Select</a>
+                <a href="#shop" data-key="nav-shop">Shop</a>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search coffee..." data-key="search-placeholder">
+                    <i class="fas fa-search search-icon"></i>
+                    <div class="search-dropdown" id="searchDropdown"></div>
+                </div>
+                <div class="language-switcher">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)">
+                        <option value="en">EN</option>
+                        <option value="uz">UZ</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
                 <div class="nav-cart" onclick="showCart()">
                     <i class="fas fa-shopping-basket"></i>
                     <span class="cart-count">0</span>
@@ -30,26 +47,26 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
-                    <h1>New Cafe<br>by <span class="green">StarBucks</span></h1>
-                    <p>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
+                    <h1 data-key="hero-title">New Cafe<br>by <span class="green">StarBucks</span></h1>
+                    <p data-key="hero-desc">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
                     
                     <div class="hero-buttons">
-                        <button class="btn-primary">Select a coffee</button>
-                        <button class="btn-secondary">More</button>
+                        <button class="btn-primary" data-key="btn-select">Select a coffee</button>
+                        <button class="btn-secondary" data-key="btn-more">More</button>
                     </div>
 
                     <div class="stats">
                         <div class="stat">
                             <span class="number">9k+</span>
-                            <span class="label">Premium Users</span>
+                            <span class="label" data-key="stat-users">Premium Users</span>
                         </div>
                         <div class="stat">
                             <span class="number">2k+</span>
-                            <span class="label">Happy Customer</span>
+                            <span class="label" data-key="stat-customers">Happy Customer</span>
                         </div>
                         <div class="stat">
                             <span class="number">28+</span>
-                            <span class="label">Awards Winning</span>
+                            <span class="label" data-key="stat-awards">Awards Winning</span>
                         </div>
                     </div>
                 </div>
@@ -63,28 +80,28 @@
             </div>
 
             <div class="features-card">
-                <div class="we-have-badge">WE HAVE</div>
+                <div class="we-have-badge" data-key="we-have">WE HAVE</div>
                 <div class="features">
                     <div class="feature">
                         <div class="feature-icon">
                             <img src="img/1.png" alt="Tasty">
                         </div>
-                        <h3>Tasty</h3>
-                        <p>We have the most delicious coffee</p>
+                        <h3 data-key="feature-tasty">Tasty</h3>
+                        <p data-key="feature-tasty-desc">We have the most delicious coffee</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">
                             <img src="img/2.png" alt="Fast">
                         </div>
-                        <h3>Fast</h3>
-                        <p>Our cafe will serve you quickly</p>
+                        <h3 data-key="feature-fast">Fast</h3>
+                        <p data-key="feature-fast-desc">Our cafe will serve you quickly</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">
                             <img src="img/3.png" alt="Available">
                         </div>
-                        <h3>Available</h3>
-                        <p>Cafe will served the most pleasant prices</p>
+                        <h3 data-key="feature-available">Available</h3>
+                        <p data-key="feature-available-desc">Cafe will served the most pleasant prices</p>
                     </div>
                 </div>
             </div>
@@ -98,15 +115,15 @@
                 <div class="we-make-left">
                     <div class="cafe-image">
                         <img src="img/4.png" alt="Cafe Image">
-                        <div class="we-have-small">WE HAVE</div>
+                        <div class="we-have-small" data-key="we-have">WE HAVE</div>
                     </div>
                 </div>
                 <div class="we-make-right">
-                    <h2>We make <span class="green">delicious</span></h2>
-                    <p>Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
+                    <h2 data-key="we-make-title">We make <span class="green">delicious</span></h2>
+                    <p data-key="we-make-desc">Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
                     <div class="cooking-image">
                         <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee Making">
-                        <button class="btn-cooking">▶ Cooking Process</button>
+                        <button class="btn-cooking" data-key="btn-cooking">▶ Cooking Process</button>
                     </div>
                 </div>
             </div>
@@ -117,8 +134,8 @@
     <section class="products" id="select">
         <div class="container">
             <div class="products-header">
-                <h2>New Our <span class="green">Products</span></h2>
-                <p class="products-desc">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount! Starbucks coffee and don't forget about the discount!</p>
+                <h2 data-key="products-title">New Our <span class="green">Products</span></h2>
+                <p class="products-desc" data-key="products-desc">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount! Starbucks coffee and don't forget about the discount!</p>
             </div>
             
             <div class="products-grid">
@@ -138,7 +155,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Latte" data-price="28000">
                     <div class="product-image">
@@ -156,7 +173,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Cappuccino" data-price="30000">
                     <div class="product-image">
@@ -174,7 +191,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Espresso" data-price="22000">
                     <div class="product-image">
@@ -192,7 +209,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Mocha" data-price="35000">
                     <div class="product-image">
@@ -210,7 +227,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Macchiato" data-price="32000">
                     <div class="product-image">
@@ -228,7 +245,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Frappuccino" data-price="38000">
                     <div class="product-image">
@@ -246,7 +263,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Cold Brew" data-price="27000">
                     <div class="product-image">
@@ -264,7 +281,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card" data-name="Flat White" data-price="29000">
                     <div class="product-image">
@@ -282,7 +299,7 @@
                             <button class="qty-btn plus">+</button>
                         </div>
                     </div>
-                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn-buy" onclick="addToCart(this)" data-key="btn-add-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -292,44 +309,44 @@
     <section class="events">
         <div class="container">
             <div class="events-header">
-                <p>Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
-                <h2>New Our <span class="green">Events</span></h2>
+                <p data-key="events-desc">Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
+                <h2 data-key="events-title">New Our <span class="green">Events</span></h2>
             </div>
             
             <div class="events-grid">
                 <div class="event-card large">
                     <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Two Coffee">
                     <div class="event-content">
-                        <h3>TWO COFFEE FOR 1 PRICE</h3>
-                        <button class="btn-more">More</button>
+                        <h3 data-key="event-two-coffee">TWO COFFEE FOR 1 PRICE</h3>
+                        <button class="btn-more" data-key="btn-more">More</button>
                     </div>
                 </div>
                 <div class="event-card">
                     <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitchen Tour">
                     <div class="event-content">
-                        <h3>KITCHEN TOUR</h3>
-                        <button class="btn-more">More</button>
+                        <h3 data-key="event-kitchen">KITCHEN TOUR</h3>
+                        <button class="btn-more" data-key="btn-more">More</button>
                     </div>
                 </div>
                 <div class="event-card">
                     <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Free Coffee">
                     <div class="event-content">
-                        <h3>FREE COFFEE FOR 3 COFFEE</h3>
-                        <button class="btn-more">More</button>
+                        <h3 data-key="event-free-coffee">FREE COFFEE FOR 3 COFFEE</h3>
+                        <button class="btn-more" data-key="btn-more">More</button>
                     </div>
                 </div>
                 <div class="event-card">
                     <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instagram">
                     <div class="event-content">
-                        <h3>OUR INSTAGRAM</h3>
-                        <button class="btn-more">More</button>
+                        <h3 data-key="event-instagram">OUR INSTAGRAM</h3>
+                        <button class="btn-more" data-key="btn-more">More</button>
                     </div>
                 </div>
                 <div class="event-card">
                     <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Choose Us">
                     <div class="event-content">
-                        <h3>WHERE ARE YOU CHOOSE US?</h3>
-                        <button class="btn-more">More</button>
+                        <h3 data-key="event-choose-us">WHERE ARE YOU CHOOSE US?</h3>
+                        <button class="btn-more" data-key="btn-more">More</button>
                     </div>
                 </div>
             </div>
@@ -341,8 +358,8 @@
         <div class="container">
             <div class="contacts-content">
                 <div class="contacts-left">
-                    <h2><span class="green">Contacts</span></h2>
-                    <p>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
+                    <h2 data-key="contacts-title"><span class="green">Contacts</span></h2>
+                    <p data-key="contacts-desc">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
                     
                     <div class="contact-info">
                         <div class="contact-item">
@@ -382,30 +399,30 @@
                     <div class="logo">StarBucks</div>
                     <div class="footer-links">
                         <div class="link-group">
-                            <h4>Main</h4>
-                            <a href="#">Home</a>
-                            <a href="#">Select</a>
-                            <a href="#">Shop</a>
+                            <h4 data-key="footer-main">Main</h4>
+                            <a href="#" data-key="nav-home">Home</a>
+                            <a href="#" data-key="nav-select">Select</a>
+                            <a href="#" data-key="nav-shop">Shop</a>
                         </div>
                         <div class="link-group">
-                            <h4>We make</h4>
-                            <a href="#">Delicious</a>
-                            <a href="#">Cooking Process</a>
+                            <h4 data-key="footer-we-make">We make</h4>
+                            <a href="#" data-key="footer-delicious">Delicious</a>
+                            <a href="#" data-key="footer-cooking">Cooking Process</a>
                         </div>
                         <div class="link-group">
-                            <h4>Products</h4>
-                            <a href="#">Fast</a>
-                            <a href="#">Cappuccino</a>
+                            <h4 data-key="footer-products">Products</h4>
+                            <a href="#" data-key="footer-fast">Fast</a>
+                            <a href="#" data-key="footer-cappuccino">Cappuccino</a>
                         </div>
                         <div class="link-group">
-                            <h4>Events</h4>
-                            <a href="#">Two Coffee</a>
-                            <a href="#">Kitchen Tour</a>
+                            <h4 data-key="footer-events">Events</h4>
+                            <a href="#" data-key="footer-two-coffee">Two Coffee</a>
+                            <a href="#" data-key="footer-kitchen-tour">Kitchen Tour</a>
                         </div>
                         <div class="link-group">
-                            <h4>Contacts</h4>
-                            <a href="#">Instagram</a>
-                            <a href="#">Phone</a>
+                            <h4 data-key="footer-contacts">Contacts</h4>
+                            <a href="#" data-key="footer-instagram">Instagram</a>
+                            <a href="#" data-key="footer-phone">Phone</a>
                         </div>
                     </div>
                 </div>
@@ -421,17 +438,17 @@
     <div id="cartModal" class="cart-modal">
         <div class="cart-modal-content">
             <div class="cart-header">
-                <h2>Savat</h2>
+                <h2 data-key="cart-title">Savat</h2>
                 <span class="cart-close">&times;</span>
             </div>
             <div class="cart-items" id="cartItems">
-                <p class="empty-cart">Savat bo'sh</p>
+                <p class="empty-cart" data-key="cart-empty">Savat bo'sh</p>
             </div>
             <div class="cart-footer">
                 <div class="cart-total-section">
-                    <strong>Jami: <span id="cartModalTotal">0 so'm</span></strong>
+                    <strong><span data-key="cart-total">Jami:</span> <span id="cartModalTotal">0 so'm</span></strong>
                 </div>
-                <button class="checkout-btn" onclick="checkout()">Buyurtma berish</button>
+                <button class="checkout-btn" onclick="checkout()" data-key="btn-checkout">Buyurtma berish</button>
             </div>
         </div>
     </div>
