@@ -1,3 +1,261 @@
+// Language translations
+const translations = {
+    en: {
+        'nav-home': 'Home',
+        'nav-select': 'Select',
+        'nav-shop': 'Shop',
+        'hero-title': 'New Cafe<br>by <span class="green">StarBucks</span>',
+        'hero-desc': 'Have time to buy the most harmonious drinks in the new Starbucks coffee and don\'t forget about the discount!',
+        'btn-select': 'Select a coffee',
+        'btn-more': 'More',
+        'stat-users': 'Premium Users',
+        'stat-customers': 'Happy Customer',
+        'stat-awards': 'Awards Winning',
+        'we-have': 'WE HAVE',
+        'feature-tasty': 'Tasty',
+        'feature-tasty-desc': 'We have the most delicious coffee',
+        'feature-fast': 'Fast',
+        'feature-fast-desc': 'Our cafe will serve you quickly',
+        'feature-available': 'Available',
+        'feature-available-desc': 'Cafe will served the most pleasant prices',
+        'we-make-title': 'We make <span class="green">delicious</span>',
+        'we-make-desc': 'Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market',
+        'btn-cooking': '▶ Cooking Process',
+        'products-title': 'New Our <span class="green">Products</span>',
+        'products-desc': 'Have time to buy the most harmonious drinks in the new Starbucks coffee and don\'t forget about the discount!',
+        'btn-add-cart': 'Add to Cart',
+        'events-desc': 'Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market',
+        'events-title': 'New Our <span class="green">Events</span>',
+        'event-two-coffee': 'TWO COFFEE FOR 1 PRICE',
+        'event-kitchen': 'KITCHEN TOUR',
+        'event-free-coffee': 'FREE COFFEE FOR 3 COFFEE',
+        'event-instagram': 'OUR INSTAGRAM',
+        'event-choose-us': 'WHERE ARE YOU CHOOSE US?',
+        'contacts-title': '<span class="green">Contacts</span>',
+        'contacts-desc': 'Have time to buy the most harmonious drinks in the new Starbucks coffee and don\'t forget about the discount!',
+        'footer-main': 'Main',
+        'footer-we-make': 'We make',
+        'footer-delicious': 'Delicious',
+        'footer-cooking': 'Cooking Process',
+        'footer-products': 'Products',
+        'footer-fast': 'Fast',
+        'footer-cappuccino': 'Cappuccino',
+        'footer-events': 'Events',
+        'footer-two-coffee': 'Two Coffee',
+        'footer-kitchen-tour': 'Kitchen Tour',
+        'footer-contacts': 'Contacts',
+        'footer-instagram': 'Instagram',
+        'footer-phone': 'Phone',
+        'cart-title': 'Cart',
+        'cart-empty': 'Cart is empty',
+        'cart-total': 'Total:',
+        'btn-checkout': 'Place Order',
+        'search-placeholder': 'Search coffee...'
+    },
+    uz: {
+        'nav-home': 'Bosh sahifa',
+        'nav-select': 'Tanlash',
+        'nav-shop': 'Do\'kon',
+        'hero-title': 'Yangi Kafe<br><span class="green">StarBucks</span> tomonidan',
+        'hero-desc': 'Yangi Starbucks qahvasida eng uyg\'un ichimliklarni sotib olishga vaqt ajrating va chegirmani unutmang!',
+        'btn-select': 'Qahva tanlang',
+        'btn-more': 'Ko\'proq',
+        'stat-users': 'Premium foydalanuvchilar',
+        'stat-customers': 'Baxtli mijozlar',
+        'stat-awards': 'Mukofotlar',
+        'we-have': 'BIZDA BOR',
+        'feature-tasty': 'Mazali',
+        'feature-tasty-desc': 'Bizda eng mazali qahva bor',
+        'feature-fast': 'Tez',
+        'feature-fast-desc': 'Kafemiz sizga tez xizmat ko\'rsatadi',
+        'feature-available': 'Mavjud',
+        'feature-available-desc': 'Kafe eng yoqimli narxlarda xizmat ko\'rsatadi',
+        'we-make-title': 'Biz <span class="green">mazali</span> tayyorlaymiz',
+        'we-make-desc': 'Faqat 2021 yilda biz siz, yaqinlaringiz, barchangiz uchun 100,000 dan ortiq buyurtma bajardik va 2022 yilda bozorni zabt etishga tayyormiz',
+        'btn-cooking': '▶ Tayyorlash jarayoni',
+        'products-title': 'Bizning yangi <span class="green">Mahsulotlar</span>',
+        'products-desc': 'Yangi Starbucks qahvasida eng uyg\'un ichimliklarni sotib olishga vaqt ajrating va chegirmani unutmang!',
+        'btn-add-cart': 'Savatga qo\'shish',
+        'events-desc': 'Faqat 2021 yilda biz siz, yaqinlaringiz, barchangiz uchun 100,000 dan ortiq buyurtma bajardik va 2022 yilda bozorni zabt etishga tayyormiz',
+        'events-title': 'Bizning yangi <span class="green">Tadbirlar</span>',
+        'event-two-coffee': 'IKKITA QAHVA 1 NARXDA',
+        'event-kitchen': 'OSHXONA SAYOHATI',
+        'event-free-coffee': '3 QAHVAGA BEPUL QAHVA',
+        'event-instagram': 'BIZNING INSTAGRAM',
+        'event-choose-us': 'NIMA UCHUN BIZNI TANLAYSIZ?',
+        'contacts-title': '<span class="green">Aloqa</span>',
+        'contacts-desc': 'Yangi Starbucks qahvasida eng uyg\'un ichimliklarni sotib olishga vaqt ajrating va chegirmani unutmang!',
+        'footer-main': 'Asosiy',
+        'footer-we-make': 'Biz tayyorlaymiz',
+        'footer-delicious': 'Mazali',
+        'footer-cooking': 'Tayyorlash jarayoni',
+        'footer-products': 'Mahsulotlar',
+        'footer-fast': 'Tez',
+        'footer-cappuccino': 'Kapuchino',
+        'footer-events': 'Tadbirlar',
+        'footer-two-coffee': 'Ikkita qahva',
+        'footer-kitchen-tour': 'Oshxona sayohati',
+        'footer-contacts': 'Aloqa',
+        'footer-instagram': 'Instagram',
+        'footer-phone': 'Telefon',
+        'cart-title': 'Savat',
+        'cart-empty': 'Savat bo\'sh',
+        'cart-total': 'Jami:',
+        'btn-checkout': 'Buyurtma berish',
+        'search-placeholder': 'Qahva qidirish...'
+    },
+    ru: {
+        'nav-home': 'Главная',
+        'nav-select': 'Выбрать',
+        'nav-shop': 'Магазин',
+        'hero-title': 'Новое Кафе<br>от <span class="green">StarBucks</span>',
+        'hero-desc': 'Успейте купить самые гармоничные напитки в новом кофе Starbucks и не забудьте о скидке!',
+        'btn-select': 'Выберите кофе',
+        'btn-more': 'Больше',
+        'stat-users': 'Премиум пользователи',
+        'stat-customers': 'Довольные клиенты',
+        'stat-awards': 'Награды',
+        'we-have': 'У НАС ЕСТЬ',
+        'feature-tasty': 'Вкусно',
+        'feature-tasty-desc': 'У нас самый вкусный кофе',
+        'feature-fast': 'Быстро',
+        'feature-fast-desc': 'Наше кафе обслужит вас быстро',
+        'feature-available': 'Доступно',
+        'feature-available-desc': 'Кафе предлагает самые приятные цены',
+        'we-make-title': 'Мы делаем <span class="green">вкусно</span>',
+        'we-make-desc': 'Только в 2021 году мы сделали более 100 000 заказов для вас, ваших близких, всех вас, а в 2022 году мы готовы завоевать рынок',
+        'btn-cooking': '▶ Процесс приготовления',
+        'products-title': 'Наши новые <span class="green">Продукты</span>',
+        'products-desc': 'Успейте купить самые гармоничные напитки в новом кофе Starbucks и не забудьте о скидке!',
+        'btn-add-cart': 'В корзину',
+        'events-desc': 'Только в 2021 году мы сделали более 100 000 заказов для вас, ваших близких, всех вас, а в 2022 году мы готовы завоевать рынок',
+        'events-title': 'Наши новые <span class="green">Мероприятия</span>',
+        'event-two-coffee': 'ДВА КОФЕ ПО ЦЕНЕ ОДНОГО',
+        'event-kitchen': 'ЭКСКУРСИЯ ПО КУХНЕ',
+        'event-free-coffee': 'БЕСПЛАТНОЕ КОФЕ ЗА 3 КОФЕ',
+        'event-instagram': 'НАШ INSTAGRAM',
+        'event-choose-us': 'ПОЧЕМУ ВЫ ВЫБИРАЕТЕ НАС?',
+        'contacts-title': '<span class="green">Контакты</span>',
+        'contacts-desc': 'Успейте купить самые гармоничные напитки в новом кофе Starbucks и не забудьте о скидке!',
+        'footer-main': 'Основное',
+        'footer-we-make': 'Мы делаем',
+        'footer-delicious': 'Вкусно',
+        'footer-cooking': 'Процесс приготовления',
+        'footer-products': 'Продукты',
+        'footer-fast': 'Быстро',
+        'footer-cappuccino': 'Капучино',
+        'footer-events': 'Мероприятия',
+        'footer-two-coffee': 'Два кофе',
+        'footer-kitchen-tour': 'Экскурсия по кухне',
+        'footer-contacts': 'Контакты',
+        'footer-instagram': 'Instagram',
+        'footer-phone': 'Телефон',
+        'cart-title': 'Корзина',
+        'cart-empty': 'Корзина пуста',
+        'cart-total': 'Итого:',
+        'btn-checkout': 'Оформить заказ',
+        'search-placeholder': 'Поиск кофе...'
+    }
+};
+
+let currentLanguage = 'en';
+
+// Change language function
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    const elements = document.querySelectorAll('[data-key]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' && element.type === 'text') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Save language preference
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+// Search functionality
+function searchProducts(query) {
+    const searchDropdown = document.getElementById('searchDropdown');
+    const searchQuery = query.toLowerCase().trim();
+    
+    if (searchQuery === '') {
+        searchDropdown.style.display = 'none';
+        return;
+    }
+    
+    const productCards = document.querySelectorAll('.product-card');
+    const matchedProducts = [];
+    
+    productCards.forEach(card => {
+        const productName = card.dataset.name.toLowerCase();
+        const productDesc = card.querySelector('p').textContent.toLowerCase();
+        const price = card.querySelector('.price').textContent;
+        
+        if (productName.includes(searchQuery) || productDesc.includes(searchQuery)) {
+            matchedProducts.push({
+                name: card.dataset.name,
+                desc: card.querySelector('p').textContent,
+                price: price,
+                element: card
+            });
+        }
+    });
+    
+    // Show dropdown with results
+    if (matchedProducts.length > 0) {
+        let dropdownHTML = '';
+        matchedProducts.forEach(product => {
+            dropdownHTML += `
+                <div class="search-result-item" onclick="selectProduct('${product.name}')">
+                    <div class="result-name">${product.name}</div>
+                    <div class="result-desc">${product.desc}</div>
+                    <div class="result-price">${product.price}</div>
+                </div>
+            `;
+        });
+        searchDropdown.innerHTML = dropdownHTML;
+        searchDropdown.style.display = 'block';
+    } else {
+        searchDropdown.innerHTML = '<div class="no-results-dropdown">No products found</div>';
+        searchDropdown.style.display = 'block';
+    }
+}
+
+// Select product from dropdown
+function selectProduct(productName) {
+    const productCard = document.querySelector(`[data-name="${productName}"]`);
+    if (productCard) {
+        productCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        productCard.style.transform = 'scale(1.05)';
+        productCard.style.boxShadow = '0 0 20px rgba(0, 212, 170, 0.5)';
+        
+        setTimeout(() => {
+            productCard.style.transform = 'scale(1)';
+            productCard.style.boxShadow = '';
+        }, 1000);
+    }
+    
+    // Hide dropdown and clear search
+    document.getElementById('searchDropdown').style.display = 'none';
+    document.getElementById('searchInput').value = '';
+}
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const nav = document.getElementById('mobileNav');
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+}
+
 // Cart functionality
 let cart = [];
 let cartTotal = 0;
@@ -175,6 +433,44 @@ function showNotification(message) {
 
 // Initialize quantity controls
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('languageSelect').value = savedLanguage;
+    changeLanguage(savedLanguage);
+    
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            searchProducts(this.value);
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                searchProducts(this.value);
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const searchContainer = document.querySelector('.search-container');
+            if (!searchContainer.contains(e.target)) {
+                document.getElementById('searchDropdown').style.display = 'none';
+            }
+        });
+        
+        // Close mobile menu when clicking nav links
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const nav = document.getElementById('mobileNav');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+    }
+    
     // Add event listeners to quantity buttons
     document.querySelectorAll('.qty-btn').forEach(button => {
         button.addEventListener('click', function() {
