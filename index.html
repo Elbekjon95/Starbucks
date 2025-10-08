@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks - New Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">StarBucks</div>
+            <nav class="nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#select">Select</a>
+                <a href="#shop">Shop</a>
+                <div class="nav-cart" onclick="showCart()">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>New Cafe<br>by <span class="green">StarBucks</span></h1>
+                    <p>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Select a coffee</button>
+                        <button class="btn-secondary">More</button>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="number">9k+</span>
+                            <span class="label">Premium Users</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">2k+</span>
+                            <span class="label">Happy Customer</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">28+</span>
+                            <span class="label">Awards Winning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="coffee-cup">
+                        <img src="Group 2.png" alt="Starbucks Coffee Cup">
+                    </div>
+                    <div class="vector-decoration"></div>
+                </div>
+            </div>
+
+            <div class="features-card">
+                <div class="we-have-badge">WE HAVE</div>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="img/1.png" alt="Tasty">
+                        </div>
+                        <h3>Tasty</h3>
+                        <p>We have the most delicious coffee</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="img/2.png" alt="Fast">
+                        </div>
+                        <h3>Fast</h3>
+                        <p>Our cafe will serve you quickly</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="img/3.png" alt="Available">
+                        </div>
+                        <h3>Available</h3>
+                        <p>Cafe will served the most pleasant prices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- We Make Section -->
+    <section class="we-make">
+        <div class="container">
+            <div class="we-make-content">
+                <div class="we-make-left">
+                    <div class="cafe-image">
+                        <img src="img/4.png" alt="Cafe Image">
+                        <div class="we-have-small">WE HAVE</div>
+                    </div>
+                </div>
+                <div class="we-make-right">
+                    <h2>We make <span class="green">delicious</span></h2>
+                    <p>Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
+                    <div class="cooking-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee Making">
+                        <button class="btn-cooking">▶ Cooking Process</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="select">
+        <div class="container">
+            <div class="products-header">
+                <h2>New Our <span class="green">Products</span></h2>
+                <p class="products-desc">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount! Starbucks coffee and don't forget about the discount!</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-name="Americano" data-price="25000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Americano</h3>
+                    <p>Our cafe will serve you quickly</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">25,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Latte" data-price="28000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Latte</h3>
+                    <p>Creamy milk with espresso</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">28,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Cappuccino" data-price="30000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Cappuccino</h3>
+                    <p>Perfect foam and aroma</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">30,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Espresso" data-price="22000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Espresso</h3>
+                    <p>Strong and aromatic</p>
+                    <span class="volume">60 ml</span>
+                    <div class="price-section">
+                        <span class="price">22,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Mocha" data-price="35000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Mocha</h3>
+                    <p>Chocolate and coffee blend</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">35,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Macchiato" data-price="32000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Macchiato</h3>
+                    <p>Caramel sweetness</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">32,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Frappuccino" data-price="38000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Frappuccino</h3>
+                    <p>Iced coffee delight</p>
+                    <span class="volume">450 ml</span>
+                    <div class="price-section">
+                        <span class="price">38,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Cold Brew" data-price="27000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Cold Brew</h3>
+                    <p>Smooth cold coffee</p>
+                    <span class="volume">400 ml</span>
+                    <div class="price-section">
+                        <span class="price">27,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <div class="product-card" data-name="Flat White" data-price="29000">
+                    <div class="product-image">
+                        <div class="green-circle"></div>
+                        <img src="Group 2.png" alt="Coffee Cup">
+                    </div>
+                    <h3>Flat White</h3>
+                    <p>Velvety microfoam</p>
+                    <span class="volume">330 ml</span>
+                    <div class="price-section">
+                        <span class="price">29,000 so'm</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+        <div class="container">
+            <div class="events-header">
+                <p>Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</p>
+                <h2>New Our <span class="green">Events</span></h2>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card large">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Two Coffee">
+                    <div class="event-content">
+                        <h3>TWO COFFEE FOR 1 PRICE</h3>
+                        <button class="btn-more">More</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitchen Tour">
+                    <div class="event-content">
+                        <h3>KITCHEN TOUR</h3>
+                        <button class="btn-more">More</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Free Coffee">
+                    <div class="event-content">
+                        <h3>FREE COFFEE FOR 3 COFFEE</h3>
+                        <button class="btn-more">More</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instagram">
+                    <div class="event-content">
+                        <h3>OUR INSTAGRAM</h3>
+                        <button class="btn-more">More</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Choose Us">
+                    <div class="event-content">
+                        <h3>WHERE ARE YOU CHOOSE US?</h3>
+                        <button class="btn-more">More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts-content">
+                <div class="contacts-left">
+                    <h2><span class="green">Contacts</span></h2>
+                    <p>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="#00D4AA" stroke-width="2"/>
+                                    <circle cx="12" cy="12" r="3" stroke="#00D4AA" stroke-width="2"/>
+                                    <circle cx="17.5" cy="6.5" r="1.5" fill="#00D4AA"/>
+                                </svg>
+                            </div>
+                            <a href="https://t.me/Elbars95" class="contact-text contact-link" target="_blank">@supercoffee</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon phone">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="contact-text">+998951239505</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-right">
+                    <div class="building-image">
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Starbucks Building">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">StarBucks</div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Main</h4>
+                            <a href="#">Home</a>
+                            <a href="#">Select</a>
+                            <a href="#">Shop</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>We make</h4>
+                            <a href="#">Delicious</a>
+                            <a href="#">Cooking Process</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>Products</h4>
+                            <a href="#">Fast</a>
+                            <a href="#">Cappuccino</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>Events</h4>
+                            <a href="#">Two Coffee</a>
+                            <a href="#">Kitchen Tour</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>Contacts</h4>
+                            <a href="#">Instagram</a>
+                            <a href="#">Phone</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="phone">+7-999-999-99-99</div>
+                    <div class="social">📷</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>Savat</h2>
+                <span class="cart-close">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Savat bo'sh</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-section">
+                    <strong>Jami: <span id="cartModalTotal">0 so'm</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Buyurtma berish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
