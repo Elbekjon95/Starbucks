@@ -519,11 +519,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 50) {
-        header.style.background = 'rgba(26, 26, 26, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
+        header.classList.add('scrolled');
     } else {
-        header.style.background = 'transparent';
-        header.style.backdropFilter = 'none';
+        header.classList.remove('scrolled');
     }
 });
 
